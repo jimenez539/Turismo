@@ -1,0 +1,82 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet"	href="{% static 'css/style.css' %}" type="text/css" media="all" /> 
+	<link  rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css"> 
+	<link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+
+	<!-- For-Mobile-Apps -->
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<meta name="keywords" content="Spa Salon a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+			<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- //For-Mobile-Apps -->
+
+	<!-- Web-Fonts -->
+			<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Merienda:400,700' rel='stylesheet' type='text/css'>
+		<!-- //Web-Fonts -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>{% block title %} Roraima y Gran Sabana {% endblock %}</title>
+</head>
+<body>
+{% block header %}
+	{% include 'base/header.html' %}
+{% endblock %}
+
+{% block content %}
+	
+{% endblock %}
+
+{% block footer %}
+	{% include 'base/footer.html' %}
+{% endblock %}
+
+<!-- common js -->
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>	
+	<!-- //js -->
+	<!-- script for gallery -->
+		<script src="{% static 'js/lightbox-plus-jquery.min.js' %}"> </script>
+	<!-- //script for gallery -->
+	
+	<!-- here stars scrolling icon -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+					var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+					};
+				*/
+									
+				$().UItoTop({ easingType: 'easeOutQuart' });
+									
+				});
+		</script>
+	<!-- //here ends scrolling icon -->
+
+	<!-- Script For Number Scrolling -->
+		<script type="text/javascript" src="{% static 'js/numscroller-1.0.js' %}"></script>
+	<!-- //Script For Number Scrolling -->
+
+	<!-- start-smooth-scrolling -->
+			<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+			<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+			</script>
+	<!-- //start-smoth-scrolling -->
+
+</body>
+</html>
